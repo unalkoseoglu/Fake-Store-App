@@ -1,0 +1,22 @@
+{
+    "categories":{       
+        "electronics":"Electronics",
+        "jewelery":"Jewelery",
+        "mens_clothing":"Men's Clothing",
+        "womens_clothing":"Women's Clothing"        
+    },
+        "tab":{
+        "home":"Home",
+        "cart":"Cart",
+        "notifi":"Notfifi",
+        "profile":"Profile"
+    },
+    "home":{
+        "welcome":"Welcome",
+        "ourFashionsApp":"Our Fashions App",
+        "search":"Search..",
+        "newArrials":"New Arrivals",
+        "viewAll":"View All"
+    }
+    
+}
