@@ -31,16 +31,13 @@ dependencies:
     sdk: flutter
   flutter_mobx: ^2.0.6+1
 
-  #State Management
-  provider: ^6.0.3
-  
-
   #Database
   hive_flutter: ^1.1.0
 
   #Network
   vexana: ^3.0.1
   mobx: ^2.0.7+5
+  
 
   #Localization
   easy_localization: ^3.0.1
