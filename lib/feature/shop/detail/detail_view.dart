@@ -65,7 +65,7 @@ class DetailView extends StatelessWidget {
                                     _ItemImages(
                                         id: id, model: viewModel.products),
                                     _description(context, viewModel.products),
-                                    context.emptySizedHeightBoxNormal,
+                                    context.emptySizedHeightBoxHigh,
                                     _AddtoCart(viewModel, context)
                                   ],
                                 ),

@@ -23,7 +23,7 @@ class _ProductCardState extends State<ProductCard> {
       title: ClipRRect(
         borderRadius: context.normalBorderRadius,
         child: CachedNetworkImage(
-          imageUrl: widget.items[widget.index].category!.image ?? '',
+          imageUrl: widget.items[widget.index].images?[0] ?? '',
           height: context.dynamicHeight(0.2),
           fit: BoxFit.cover,
         ),

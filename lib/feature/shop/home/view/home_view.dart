@@ -42,10 +42,10 @@ class HomeView extends StatelessWidget with BaseState {
               context.emptySizedHeightBoxLow3x,
               DiscountCard(viewModel: viewModel),
               context.emptySizedHeightBoxLow,
-              _newArrivals(context, viewModel.products),
+              _newArrivals(context),
               context.emptySizedHeightBoxLow,
               Observer(builder: (_) {
-                return _productCard(context, viewModel.limit);
+                return _productCard(context, viewModel.products);
               })
             ],
           ),
@@ -69,8 +69,8 @@ class HomeView extends StatelessWidget with BaseState {
             itemCount: items.length,
             itemBuilder: (context, index) {
               return ProductCard(
-                onTap: () async {
-                  HomeViewModel().sendItemID(items[index].id ?? 0);
+                onTap: () {
+                  HomeViewModel().sendItemID((items[index].id! - 1));
                 },
                 items: items,
                 index: index,
@@ -78,7 +78,7 @@ class HomeView extends StatelessWidget with BaseState {
             });
   }
 
-  Row _newArrivals(BuildContext context, List<ProductModel> items) {
+  Row _newArrivals(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [

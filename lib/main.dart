@@ -7,10 +7,9 @@ import 'package:fake_store/product/init/app/navigation/navigation_manager.dart';
 import 'package:fake_store/product/init/app/navigation/navigation_route.dart';
 import 'package:fake_store/product/init/theme/app_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
 import 'package:easy_localization/easy_localization.dart';
 
-void main() {
+Future<void> main() async {
   AppInitiliaze();
   runApp(EasyLocalization(
     startLocale: LanguageConstants.instance.enLocale,
@@ -25,20 +24,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Sizer(
-      builder: (BuildContext context, Orientation orientation,
-          DeviceType deviceType) {
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          theme: ThemeManager.creatTheme(AppThemeLight()),
-          localizationsDelegates: context.localizationDelegates,
-          supportedLocales: context.supportedLocales,
-          locale: context.locale,
-          home: ShopTabView(),
-          onGenerateRoute: NavigationRoute().generateRoute,
-          navigatorKey: NavigationManager.instance.navigatorKey,
-        );
-      },
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeManager.creatTheme(AppThemeLight()),
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
+      home: ShopTabView(),
+      onGenerateRoute: NavigationRoute().generateRoute,
+      navigatorKey: NavigationManager.instance.navigatorKey,
     );
   }
 }
