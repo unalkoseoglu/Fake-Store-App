@@ -1,6 +1,7 @@
 Fake Store App
 
+![Fake-Store-App01](https://user-images.githubusercontent.com/96636634/187024482-8b19b739-b336-4f07-93a9-98f10cee9030.png)
+![Fake-Store-App04](https://user-images.githubusercontent.com/96636634/187024405-31d352d9-10e1-4600-bc78-08ea1e6e9c68.png)     
 
-![Fake-Store-App01](https://user-images.githubusercontent.com/96636634/187024172-30f3a661-cb53-439b-8652-95b25c317346.png)
-![Fake-Store-App02](https://user-images.githubusercontent.com/96636634/187024173-89e069ba-31d5-4e15-8942-5dfb0500a8d8.png)
-![Fake-Store-App03](https://user-images.githubusercontent.com/96636634/187024174-c0c8d56e-a72d-49a4-bc71-25d62bb5ba30.png)
+![Fake-Store-App03](https://user-images.githubusercontent.com/96636634/187024408-57786135-e5d4-44c9-870c-82e3f505894f.png)
+![Fake-Store-App02](https://user-images.githubusercontent.com/96636634/187024492-63ad1582-3b92-45ec-89f3-04ea2506bd0a.png)
