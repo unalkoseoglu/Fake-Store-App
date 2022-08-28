@@ -1,18 +1,21 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:fake_store/feature/shop/home/viewModel/home_view_model.dart';
-import 'package:fake_store/product/widget/appBar/sliver_app_bar.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:kartal/kartal.dart';
 import 'package:lottie/lottie.dart';
+
+import 'package:fake_store/feature/shop/home/viewModel/home_view_model.dart';
+import 'package:fake_store/product/widget/appBar/sliver_app_bar.dart';
 
 import '../../../core/init/app/base/base_view.dart';
 import '../../../core/init/constants/image_constants.dart';
 import '../home/model/product_model.dart';
 
 class DetailView extends StatelessWidget {
-  DetailView({Key? key, required this.id}) : super(key: key);
+  DetailView({
+    Key? key,
+    required this.id,
+  }) : super(key: key);
   final int id;
 
   int? selectedImage;
@@ -58,15 +61,16 @@ class DetailView extends StatelessWidget {
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceBetween,
                                         children: [
-                                          _ProductTitle(viewModel, context),
-                                          _ItemCount(context)
+                                          _buildProductTitle(
+                                              viewModel, context),
+                                          _buildItemCont(context)
                                         ]),
                                     context.emptySizedHeightBoxNormal,
                                     _ItemImages(
                                         id: id, model: viewModel.products),
                                     _description(context, viewModel.products),
                                     context.emptySizedHeightBoxHigh,
-                                    _AddtoCart(viewModel, context)
+                                    _buildAddtoCart(viewModel, context)
                                   ],
                                 ),
                               ),
@@ -78,7 +82,7 @@ class DetailView extends StatelessWidget {
             })));
   }
 
-  Row _AddtoCart(HomeViewModel viewModel, BuildContext context) {
+  Row _buildAddtoCart(HomeViewModel viewModel, BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -112,7 +116,7 @@ class DetailView extends StatelessWidget {
     ]);
   }
 
-  Column _ProductTitle(HomeViewModel viewModel, BuildContext context) {
+  Column _buildProductTitle(HomeViewModel viewModel, BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -131,7 +135,7 @@ class DetailView extends StatelessWidget {
     );
   }
 
-  Container _ItemCount(BuildContext context) {
+  Container _buildItemCont(BuildContext context) {
     return Container(
       height: context.dynamicHeight(0.05),
       decoration: BoxDecoration(
